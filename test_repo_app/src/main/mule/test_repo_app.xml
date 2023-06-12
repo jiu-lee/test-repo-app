@@ -7,6 +7,9 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
   <http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="b502fea7-3081-4977-add6-5dba04eb9d55" >
     <http:listener-connection host="0.0.0.0" port="8081" />
   </http:listener-config>
+  <flow name="test_repo_appFlow1" doc:id="e8d6d0e8-4bb2-40e3-818a-af209aebc10c" >
+    <set-variable value="test" doc:name="Set Variable" doc:id="4b21709d-a331-493d-8723-dccfa165f725" variableName="test"/>
+  </flow>
   <flow name="test_repo_appFlow" doc:id="7a77afe2-c92b-4798-8115-29089133d4a8" >
     <http:listener doc:name="Listener" doc:id="4c0f7821-220b-44d0-8f24-1c86e2e4a5c4" config-ref="HTTP_Listener_config" path="/testRepository"/>
     <set-payload value="MyFirstRepositoryCmmit" doc:name="Set Payload" doc:id="1802fb71-4ba3-4a35-bc16-6a7f34d20f6d" />
